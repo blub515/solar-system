@@ -3,10 +3,10 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* lock scrolling */
+  overflow: hidden; /* no scrolling */
 }
 
-/* Background image for the whole site */
+/* Background image */
 body {
   font-family: Arial, sans-serif;
   background: url("images/galaxy.jpg") no-repeat center center fixed;
@@ -17,29 +17,28 @@ body {
   height: 100vh;
   overflow: hidden;
   display: flex;
-  align-items: center;      /* center horizontally */
-  justify-content: center;  /* center vertically */
+  align-items: center;      
+  justify-content: center;  
 }
 
-/* Header anchored to top */
 .header {
-  position: absolute;   /* take it out of the normal flow */
-  top: 20px;            /* anchor to top */
+  position: absolute;   
+  top: 20px;            
   left: 50%;
-  transform: translateX(-50%); /* center horizontally */
+  transform: translateX(-50%); 
   text-align: center;
   color: white;
-  z-index: 10;          /* ensure it sits above solar system */
+  z-index: 10;          /* above solar system */
 }
 
-/* Main wrapper centers solar system + info box */
+/* centers solar system + info box */
 .main {
   position: relative; 
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centers vertically */
+  justify-content: center;
   gap: 20px;
   box-sizing: border-box;
 }
@@ -47,9 +46,9 @@ body {
 /* Solar system container */
 .solar-system {
   position: relative;
-  width: 90vmin;   /* scales with viewport */
-  height: 90vmin;  /* keeps it square */
-  margin: 0 auto;  /* center horizontally */
+  width: 90vmin;  
+  height: 90vmin;  
+  margin: 0 auto;  
 }
 
 /* Sun */
@@ -74,7 +73,7 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 100;  /* ensure it's above everything */
+  z-index: 100;  /* above everything */
 }
 
 
@@ -97,7 +96,7 @@ body {
 .orbit-uranus  { width: 640px; height: 640px; }
 .orbit-neptune { width: 760px; height: 760px; }
 
-/* Planet setup */
+/* Planet */
 .planet {
   position: absolute;
   top: 50%;
@@ -114,7 +113,7 @@ body {
   transform: scale(1.15);
 }
 
-/* Realistic planet sizes */
+/* planet sizes */
 #mercury img { width: 24px; height: 24px; }
 #venus   img { width: 28px; height: 28px; }
 #earth   img { width: 30px; height: 30px; }
@@ -140,21 +139,6 @@ body {
 #uranus  { --distance: 320px; animation: orbit 50s linear infinite; }
 #neptune { --distance: 380px; animation: orbit 60s linear infinite; }
 
-/*
-Info box
-.info-box {
-  position: absolute;    
-  width: 600px;
-  bottom: 10px;
-  padding: 5px;
-  background: rgba(12, 4, 87, 0.4);
-  border: 1px solid #888;
-  text-align: center;
-  display: none;
-  z-index: 10;
-}
-*/
-
 .info-box {
     position: absolute;
     width: 600px;
@@ -166,8 +150,9 @@ Info box
     display: none;
     z-index: 10;
     color: #fff;
-  }
-  .info-box .close-btn {
+}
+
+.info-box .close-btn {
     position: absolute;
     top: 5px;
     right: 8px;
@@ -177,7 +162,9 @@ Info box
     font-size: 18px;
     cursor: pointer;
     line-height: 1;
-  }
-  .info-box .close-btn:hover {
+}
+
+.info-box .close-btn:hover {
     color: #ff0;
-  }
+}
+
