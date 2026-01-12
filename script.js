@@ -11,23 +11,7 @@ const planetInfo = {
   neptune: "Neptune is the eighth and farthest planet from the Sun, an ice giant known for its dark, cold, and extremely windy atmosphere with supersonic winds, giving it a deep blue color from methane."
 };
 
-// // Function to show planet info
-// function showPlanetInfo(planetId) {
-//   const infoBox = document.getElementById("infoBox");
-//   const name = planetId.charAt(0).toUpperCase() + planetId.slice(1);
-//   infoBox.innerHTML = `<h2>${name}</h2><p>${planetInfo[planetId]}</p>`;
-//   infoBox.style.display = "block";
-// }
-
-// // Add event listeners
-// document.querySelectorAll(".planet, #sun").forEach(planet => {
-//   planet.addEventListener("click", () => {
-//     console.log("Clicked:", planet.id);
-//     showPlanetInfo(planet.id);
-//   });
-// });
-
-  // Show info with a close button injected
+  // Show info
   function showPlanetInfo(planetId) {
     const infoBox = document.getElementById("infoBox");
     const name = planetId.charAt(0).toUpperCase() + planetId.slice(1);
@@ -40,7 +24,7 @@ const planetInfo = {
     infoBox.style.display = "block";
   }
 
-  // Event delegation: handle close clicks even after innerHTML changes
+  // handle close clicks even after innerHTML changes
   const infoBox = document.getElementById("infoBox");
   infoBox.addEventListener("click", (e) => {
     if (e.target.classList.contains("close-btn")) {
@@ -48,15 +32,16 @@ const planetInfo = {
     }
   });
 
-  // Add planet click listeners (ensure elements exist)
+  // planet click listener
   document.querySelectorAll(".planet, #sun").forEach(planet => {
     planet.addEventListener("click", () => {
       showPlanetInfo(planet.id);
     });
   });
 
-  // Optional: ESC key closes the box
+  // ESC key closes the box
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") infoBox.style.display = "none";
   });
+
 
