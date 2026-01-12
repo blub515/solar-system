@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header anchored to top -->
+  <div class="header">
+    <h1>Welcome to the Solar System!</h1>
+    <p>Click a planet to learn more.</p>
+  </div>
+
+  <!-- Main wrapper centers solar system + info box -->
+  <div class="main">
+    <div class="solar-system">
+      <!-- Sun -->
+      <div class="sun">
+        <img src="images/sun.png" alt="Sun">
+      </div>
+      <button id="sun"></button>
+
+      <!-- Orbit rings -->
+      <div class="orbit orbit-mercury"></div>
+      <div class="orbit orbit-venus"></div>
+      <div class="orbit orbit-earth"></div>
+      <div class="orbit orbit-mars"></div>
+      <div class="orbit orbit-jupiter"></div>
+      <div class="orbit orbit-saturn"></div>
+      <div class="orbit orbit-uranus"></div>
+      <div class="orbit orbit-neptune"></div>
+
+      <!-- Planets -->
+      <div class="planet" id="mercury"><img src="images/mercury.png" alt="Mercury"></div>
+      <div class="planet" id="venus"><img src="images/venus.png" alt="Venus"></div>
+      <div class="planet" id="earth"><img src="images/earth.png" alt="Earth"></div>
+      <div class="planet" id="mars"><img src="images/mars.png" alt="Mars"></div>
+      <div class="planet" id="jupiter"><img src="images/jupiter.png" alt="Jupiter"></div>
+      <div class="planet" id="saturn"><img src="images/saturn.png" alt="Saturn"></div>
+      <div class="planet" id="uranus"><img src="images/uranus.png" alt="Uranus"></div>
+      <div class="planet" id="neptune"><img src="images/neptune.png" alt="Neptune"></div>
+    </div>
+  
+
+    <!-- Info box -->
+    <div id="infoBox" class="info-box"></div>
+  </div>
+  <audio autoplay loop muted>
+  <source src="music/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
